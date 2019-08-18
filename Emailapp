@@ -1,0 +1,58 @@
+//Creating Email id specific to first name last name and dept, and generating default password 
+
+
+import java.util.Scanner;
+
+public class Emailapp {
+	private String Department ;
+	//private String emailid;
+	
+
+	public static void main(String[] args) {
+		//Email email1 = new Email("Shoaib","Nadaf");
+		//Email email2 = new Email("Neeta","Babar1");
+
+		Scanner email= new Scanner(System.in);
+		System.out.println("Enter your First Name : ");
+		String yourfirstname=email.next();
+		System.out.println("Enter your Last Name : ");
+		String yourlastname=email.next();
+		System.out.println("Email Creating using your first and last name  : " +yourfirstname+"."+yourlastname );
+	  
+		//user input for Department 
+		
+		Scanner department =new Scanner(System.in);	
+	    System.out.println("Enter your Department name : ");
+	    String deptname = department.next();
+		
+	    //System.out.println("Your Email id is Generated Congratulations : "+yourfirstname+"."+yourlastname+"@"+deptname+".tcs");
+	   
+	    
+	    //to see the complete email id 
+	   
+	    String compsuffix=".tcs";
+	    String emailid = yourfirstname.toLowerCase()+"."+yourlastname.toLowerCase()+"@"+deptname+compsuffix;
+       
+	    //to see the Password
+	  
+	   System.out.println("YOUR EMAIL IS : " +emailid);
+	   Email Passwordcreation=new Email(); 
+	   
+	   //alternate email id 
+	   
+	   
+	    Scanner alternatemailid=new Scanner (System.in);
+	    System.out.println("YOUR ALTERNATE MAIL ID  : ");
+	    String altmail= alternatemailid.next();
+	    System.out.println("YOUR ALTERNATE MAIL ID  is  : "+altmail);
+	
+	    
+	    
+	   
+	}
+		
+	}
+
+	
+	
+
