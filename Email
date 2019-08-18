@@ -1,0 +1,56 @@
+  //Creating Email id specific to first name last name and dept, and generating default password 
+
+import java.util.Scanner;
+
+public class Email {
+  private String FirstName;
+  private String LastName;
+  private String Department;
+  private String Password;
+  private String email;
+  private int mailboxCapacity = 100;
+  //private String defaultrandomPassword = 10;
+  private String alternateemail;
+  
+  // constructor to receive first name and last name 
+  
+  public Email() {
+
+	  //this.FirstName = FirstName;
+	//this.LastName = LastName;
+	//System.out.println("Email Created : " +this.FirstName+"."+this.LastName );
+	
+	//Ask for Department so set the Department 
+	  //this.Department = setDepartment();
+	 // System.out.println("Department : "+this.Department);
+	  //System.out.println("final Email id Created : " +this.FirstName+"."+this.LastName+"@"+this.Department+".co" );
+	  
+	  //call random password 
+	 this.Password= randomPassword(10);
+	 System.out.println("your Default Password is  : "+this.Password);
+	  
+  }
+  
+  /*private String setDepartment() {
+	   System.out.println("Department Code\n1 Sales \n2 Development \n3 Accounting \n4 marketing \n5 none\n Enter your Department :");
+	   Scanner in = new Scanner(System.in);
+	   int deptChoice = in.nextInt();
+	   if(deptChoice == 1) {return "Sales";}
+	   else if(deptChoice == 2) {return "Development";}
+	   else if(deptChoice == 3) {return "Accounting";}
+	   else if(deptChoice == 4) {return "Development";}
+	   else {return "none";}
+   }*/
+  // generating the Random Password 
+  private String randomPassword(int length){
+	  String passwordset ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
+	  char[] password= new char[length];
+	  for (int i=0;i<length;i++) {
+		  int rand =(int)(Math.random()*passwordset.length());
+		  password[i]=passwordset.charAt(rand); 
+	  }
+	return new String (password);	  
+
+ }
+
+}
